@@ -14,20 +14,21 @@
 <body>
   <div class="container-fluid">
     <div class="row firstRow">
-  <div class="col-md-4 col-sm-3 col-xs-1">
+  <div class="col-md-4 col-sm-3 col-xs-1 border">
 </div>
-<div class="col-md-4 text-center col-sm-6 col-xs-10">
+<div class="col-md-4 text-center col-sm-6 col-xs-10 border">
 
 
   <div class="row">
-  <div class="col-md-12 col-xs-12 text-right" id="output">0</div>
+  <div class="col-md-12 col-sm-12 col-xs-12 text-right" id="output">0</div>
 </div>
 <div class="row">
-<div class="col-md-12 col-xs-12 text-left" id="preview">&nbsp;</div>
+<div class="col-md-12 col-sm-12 col-xs-12 text-left" id="preview">&nbsp;</div>
 </div>
 
+
 <div class="row">
-<div class="col-md-6 col-xs-6" id="clear">C</div><div class="col-md-3 col-xs-3" id="percent">%</div><div class="col-md-3 col-xs-3" id="divide">/</div>
+<div class="col-md-6 col-sm-6 col-xs-6" id="clear">C</div><div class="col-md-3 col-sm-3 col-xs-3" id="percent">%</div><div class="col-md-3 col-sm-3 col-xs-3" id="divide">/</div>
 </div>
 <div class="row">
 <div class="col-md-3 col-xs-3" id="7">7</div><div class="col-md-3 col-xs-3" id="8">8</div><div class="col-md-3 col-xs-3" id="9">9</div><div class="col-md-3 col-xs-3" id="multiply">x</div>
@@ -41,6 +42,8 @@
 <div class="row">
 <div class="col-md-3 col-xs-3" id="0">0</div><div class="col-md-3 col-xs-3" id="point">.</div><div class="col-md-6 col-xs-6" id="result">=</div>
 </div>
+
+
 
 </div>
 <div class="col-md-4 col-sm-3 col-xs-1">
@@ -62,6 +65,13 @@ var newArr =[];
       $( "#1, #2, #3, #4, #5, #6, #7, #8, #9, #0, #clear, #point,#plus, #minus, #divide, #multiply, #percent" ).mouseup(function(){
          $(this).css('background-color','#DD857B');
       });
+
+      $( "#result" ).mousedown(function(){
+           $(this).css('background-color','#d06f64');
+        });
+        $( "#result" ).mouseup(function(){
+           $(this).css('background-color','#E2796D');
+        });
 
 
 

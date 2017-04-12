@@ -1,3 +1,4 @@
+.border{border: 1px solid red;}
 body{
 font-family: 'Pavanam', sans-serif;
   font-size: 2rem;
@@ -9,13 +10,13 @@ font-family: 'Pavanam', sans-serif;
 .col-md-6, .col-xs-6 {
   background-color: #DD857B;
 padding: 2rem 0 2rem 0;
-  color: F2CFCB;
+  color: #F2CFCB;
   border: 1px solid #DC8D84;
 }
 .col-md-3, .col-xs-3 {
   background-color: #DD857B;
 padding: 2rem 0 2rem 0;
-    color: F2CFCB;
+    color: #F2CFCB;
     border: 1px solid #DC8D84;
 }
 
@@ -28,7 +29,7 @@ padding: 2rem 0 2rem 0;
 #preview {
   background-color: #393A57;
   padding: 1rem 3rem 1rem 3rem;
-  color: c2c2c2;
+  color: #c2c2c2;
 }
 
 #result {
