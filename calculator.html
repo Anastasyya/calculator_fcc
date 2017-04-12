@@ -1,0 +1,169 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link rel="stylesheet" href="calculator.css">
+ <link href="https://fonts.googleapis.com/css?family=Pavanam" rel="stylesheet">
+
+
+
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row firstRow">
+  <div class="col-md-4 col-sm-3 col-xs-1">
+</div>
+<div class="col-md-4 text-center col-sm-6 col-xs-10">
+
+
+  <div class="row">
+  <div class="col-md-12 col-xs-12 text-right" id="output">0</div>
+</div>
+<div class="row">
+<div class="col-md-12 col-xs-12 text-left" id="preview">&nbsp;</div>
+</div>
+
+<div class="row">
+<div class="col-md-6 col-xs-6" id="clear">C</div><div class="col-md-3 col-xs-3" id="percent">%</div><div class="col-md-3 col-xs-3" id="divide">/</div>
+</div>
+<div class="row">
+<div class="col-md-3 col-xs-3" id="7">7</div><div class="col-md-3 col-xs-3" id="8">8</div><div class="col-md-3 col-xs-3" id="9">9</div><div class="col-md-3 col-xs-3" id="multiply">x</div>
+</div>
+<div class="row">
+<div class="col-md-3 col-xs-3" id="4">4</div><div class="col-md-3 col-xs-3" id="5">5</div><div class="col-md-3 col-xs-3" id="6">6</div><div class="col-md-3 col-xs-3" id="plus">+</div>
+</div>
+<div class="row">
+<div class="col-md-3 col-xs-3" id="1">1</div><div class="col-md-3 col-xs-3" id="2">2</div><div class="col-md-3 col-xs-3" id="3">3</div><div class="col-md-3 col-xs-3" id="minus">-</div>
+</div>
+<div class="row">
+<div class="col-md-3 col-xs-3" id="0">0</div><div class="col-md-3 col-xs-3" id="point">.</div><div class="col-md-6 col-xs-6" id="result">=</div>
+</div>
+
+</div>
+<div class="col-md-4 col-sm-3 col-xs-1">
+</div>
+</div>
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+var newArr =[];
+    $( "#1" ).click(function() {
+    newArr.push(1);
+    $('#preview').append("1");
+    });
+
+    $( "#1, #2, #3, #4, #5, #6, #7, #8, #9, #0, #clear, #point,#plus, #minus, #divide, #multiply, #percent" ).mousedown(function(){
+         $(this).css('background-color','#d06f64');
+      });
+      $( "#1, #2, #3, #4, #5, #6, #7, #8, #9, #0, #clear, #point,#plus, #minus, #divide, #multiply, #percent" ).mouseup(function(){
+         $(this).css('background-color','#DD857B');
+      });
+
+
+
+    $( "#2" ).click(function() {
+    newArr.push(2);
+    $('#preview').append("2");
+    });
+    $( "#3" ).click(function() {
+    newArr.push(3);
+    $('#preview').append("3");
+    });
+
+    $( "#4" ).click(function() {
+    newArr.push(4);
+    $('#preview').append("4");
+    });
+
+    $( "#5" ).click(function() {
+    newArr.push(5);
+    $('#preview').append("5");
+    });
+
+    $( "#6" ).click(function() {
+    newArr.push(6);
+    $('#preview').append("6");
+    });
+
+    $( "#7" ).click(function() {
+    newArr.push(7);
+    $('#preview').append("7");
+    });
+
+    $( "#8" ).click(function() {
+    newArr.push(8);
+    $('#preview').append("8");
+    });
+
+    $( "#9" ).click(function() {
+    newArr.push(9);
+    $('#preview').append("9");
+    });
+
+    $( "#0" ).click(function() {
+    newArr.push(0);
+    $('#preview').append("0");
+    });
+
+    $( "#point" ).click(function() {
+    newArr.push(".");
+    $('#preview').append(".");
+    });
+
+    $( "#plus" ).click(function() {
+    newArr.push("+");
+    $('#preview').append("+");
+    });
+
+    $( "#minus" ).click(function() {
+    newArr.push("-");
+    $('#preview').append("-");
+    });
+
+    $( "#divide" ).click(function() {
+    newArr.push("/");
+    $('#preview').append("/");
+    });
+
+    $( "#multiply" ).click(function() {
+    newArr.push("*");
+    $('#preview').append("*");
+    });
+
+    $( "#percent" ).click(function() {
+    newArr.push("/100");
+    $('#preview').append("%");
+    });
+
+    $( "#clear" ).click(function() {
+    newArr = [];
+    $( "#output" ).text("0");
+    $('#preview').html('&nbsp;');
+
+    });
+
+
+$( "#result" ).click(function() {
+  if (eval(newArr.join("")) === Infinity || eval(newArr.join("")) === -Infinity )
+  {
+    $( "#output" ).text("Error");
+  }
+  else{
+  $( "#output" ).text(eval(newArr.join("")));
+  }
+  // $('#preview').append("=");
+
+    });
+
+
+
+  });
+  </script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+body{
+font-family: 'Pavanam', sans-serif;
+  font-size: 2rem;
+}
+
+.container-fluid{
+  background-color: white;
+}
+.col-md-6, .col-xs-6 {
+  background-color: #DD857B;
+padding: 2rem 0 2rem 0;
+  color: F2CFCB;
+  border: 1px solid #DC8D84;
+}
+.col-md-3, .col-xs-3 {
+  background-color: #DD857B;
+padding: 2rem 0 2rem 0;
+    color: F2CFCB;
+    border: 1px solid #DC8D84;
+}
+
+.col-md-12, .col-xs-12{
+  background-color: #393A57;
+  padding: 4rem 3rem 1rem 0;
+  color: white;
+}
+
+#preview {
+  background-color: #393A57;
+  padding: 1rem 3rem 1rem 3rem;
+  color: c2c2c2;
+}
+
+#result {
+  background-color: #E2796D;
+}
+.firstRow {
+  margin: 6rem auto auto auto;
+}
